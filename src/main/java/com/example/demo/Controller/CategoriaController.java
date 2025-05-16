@@ -20,7 +20,7 @@ public class CategoriaController {
         this.categoriaService = categoriaService;
     }
 
-    @GetMapping
+    @GetMapping("/Listar")
     public ResponseEntity<List<CategoriaDTO>> listar() {
         List<CategoriaDTO> categorias = categoriaService.listar().stream()
                 .map(this::convertToDTO)
